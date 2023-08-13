@@ -1,8 +1,8 @@
-namespace dotnet_land {
-    public class PalindromeNumber {
-        public PalindromeNumber() { }
+namespace impl_dotnet {
+    public class Palindrome {
+        public Palindrome() { }
 
-        public bool IsPalindrome(int x) {
+        public static bool IsPalindrome(int x) {
 
             string str = x.ToString();
 

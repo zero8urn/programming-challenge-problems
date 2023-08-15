@@ -17,9 +17,9 @@ namespace impl_dotnet
             Console.WriteLine("Calc me daddy");
 
 
-            // string a = "LVIII";
-            string s = "MCMXCIV";
-            char[] inputs = s.ToArray();
+            string a = "LVIII";
+
+            char[] inputs = a.ToArray();
 
             int result = 0;
 
@@ -51,6 +51,10 @@ namespace impl_dotnet
 
                 if (currentVal < nextVal)
                 {
+                    Console.WriteLine(currentVal);
+                    Console.WriteLine(nextVal);
+
+                    Console.WriteLine("Uh oh");
                     result = result + (nextVal - currentVal);
                     i++;
                 }
@@ -69,7 +73,7 @@ namespace impl_dotnet
             //     }
             // }
 
-            Console.WriteLine($"Input: {s} : Output: {result}");
+            Console.WriteLine($"Input: {a} : Output: {result}");
         }
     }
 

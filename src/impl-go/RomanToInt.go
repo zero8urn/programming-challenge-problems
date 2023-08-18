@@ -3,7 +3,8 @@ package main
 import "fmt"
 
 func RomanToInt() {
-	s := "LVIII"
+	// s := "LVIII"
+	s := "MCMXCIV"
 	result := 0
 
 	fmt.Println("Calc me daddy")
@@ -14,8 +15,19 @@ func RomanToInt() {
 		//fmt.Printf("char: %v\n", inputs[i])
 		currentVal := lookupRomanValue(inputs[i])
 		fmt.Printf("int: %v\n", currentVal)
-                result += currentVal
-                
+
+		nextVal := 0
+
+		if i+1 < len(inputs) {
+			nextVal = lookupRomanValue(inputs[i+1])
+		}
+
+		if nextVal > currentVal {
+			result = result + (nextVal - currentVal)
+			i++
+		} else {
+			result += currentVal
+		}
 	}
 
 	fmt.Printf("Input: %v : Output: %v\n", s, result)
